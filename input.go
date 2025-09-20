@@ -31,14 +31,15 @@ type PreviousPresult struct {
 }
 
 type Input struct {
-    raw        []byte
-    CNIVersion string          `json:"cniVersion"`
-    Name       string          `json:"name"`
-    Type       string          `json:"type"`
-    ApiKey     string          `json:"api_key"`
-    DnsRecord  string          `json:"dns_record"`
-    ZoneId     string          `json:"zone_id"`
-    PrevResult PreviousPresult `json:"prevResult"`
+    raw               []byte
+    CNIVersion        string          `json:"cniVersion"`
+    Name              string          `json:"name"`
+    Type              string          `json:"type"`
+    ApiKey            string          `json:"api_key"`
+    DnsRecordType     []string        `json:"dns_record_type"`
+    DnsRecord         string          `json:"dns_record"`
+    ZoneId            string          `json:"zone_id"`
+    PrevResult        PreviousPresult `json:"prevResult"`
 }
 
 func ReadJSONInput() *Input {
