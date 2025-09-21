@@ -12,3 +12,6 @@ A chained plugin, that can create AAAA records in Cloudflare under a zone
     }
 
 A dns_record_type of AAAA, means that only ipv6 addresses are created. A, means ipv4 adresses from the container are created to.
+
+## build
+    go build -o bin
