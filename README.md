@@ -15,3 +15,20 @@ A dns_record_type of AAAA, means that only ipv6 addresses are created. A, means 
 
 ## build
     go build -o bin
+
+## configuration example,
+e.g /etc/cni/net.d/default/ctl-ipvlan-v6-gojira.conflist:
+
+    plugins: [
+        { 
+            "type": "ipvlan",
+            ...
+        },
+        {
+            "type": "cniPluginCloudflare",
+            "zone_id": "<zone id>",
+            "dns_record": "gojira.domain.tld",
+            "api_key": "Bearer <TOKEN>,
+            "dns_record_type": [ "AAAA" ]
+        }
+    ]

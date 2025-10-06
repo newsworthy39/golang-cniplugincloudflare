@@ -14,6 +14,7 @@ func (e AddCommand)  Run(input *Input, options map[string]string)  {
 
     url := fmt.Sprintf("https://api.cloudflare.com/client/v4/zones/%s/dns_records", input.ZoneId )
 
+    // TODO: Lets reverse this, around the ips instead.
     for _, v := range input.DnsRecordType {
 
         data := make(map [string]interface{})
