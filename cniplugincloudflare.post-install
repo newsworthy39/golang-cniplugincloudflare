@@ -1,0 +1,6 @@
+#!/bin/bash
+
+mkdir -p /opt/cni/bin
+
+# Create symlink to the installed binary
+ln -sf /usr/lib/cni/cniplugincloudflare /opt/cni/bin/cniplugincloudflare

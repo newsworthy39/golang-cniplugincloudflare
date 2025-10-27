@@ -1,0 +1,5 @@
+#!/bin/bash
+
+if [ -L /opt/cni/bin/cniplugincloudflare ]; then
+	rm -f /opt/cni/bin/cniplugincloudflare
+fi
